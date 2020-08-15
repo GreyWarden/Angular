@@ -90,7 +90,7 @@
         "anonymous": "never",
         "asyncArrow": "always",
         "constructor": "never",
-        "method": "never",
+        "method": "always",
         "named": "never"
       }
     },
