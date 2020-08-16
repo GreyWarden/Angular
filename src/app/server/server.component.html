@@ -1,1 +1,3 @@
-<h3>Server with id {{ id }} is currently {{ status }}!</h3>
+<p [ngStyle]="{ backgroundColor: getColor(), marginLeft: '0.2em' }" class="col-xs-3">
+  Server with id {{ id }} is currently {{ status }}!
+</p>

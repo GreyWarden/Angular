@@ -87,11 +87,11 @@
     },
     "space-before-function-paren": {
       "options": {
-        "anonymous": "never",
+        "anonymous": "always",
         "asyncArrow": "always",
-        "constructor": "never",
+        "constructor": "always",
         "method": "always",
-        "named": "never"
+        "named": "always"
       }
     },
     "typedef": [
