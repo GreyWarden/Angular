@@ -1,9 +1,22 @@
-<button
-  class="btn btn-primary"
-  [disabled]="!isServerCreationAllowed"
-  (click)="onCreateServer()"
->
-  Add Server
-</button>
-<p>{{ serverCreationStatus }}</p>
+<div class="form-inline row">
+  <label class="form-group">
+    Enter new server name:
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="serverName"
+    >
+  </label>
+</div>
+<div class="row">
+  <button
+    class="btn btn-primary"
+    [disabled]="!isServerCreationAllowed"
+    (click)="onCreateServer()"
+  >
+    Add Server
+  </button>
+  <p>{{ serverCreationStatus }}</p>
+  <p *ngIf="isServerCreated">New server name: {{ serverName }}</p>
+</div>
 <app-server></app-server>

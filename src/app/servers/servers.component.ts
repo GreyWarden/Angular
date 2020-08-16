@@ -12,21 +12,25 @@ export class ServersComponent implements OnInit {
   }
 
   isServerCreationAllowed = false;
+  isServerCreated = false;
   serverCreationStatus = 'No server was created';
+  serverName = '';
 
   ngOnInit (): void {
   }
 
   onCreateServer (): void {
-    this.isServerCreationAllowed = false;
-    this.serverCreationStatus = 'Server was created';
     this.allowServerCreation();
+    this.isServerCreationAllowed = false;
+    this.isServerCreated = true;
+    this.serverCreationStatus = 'Server was created';
   }
 
   allowServerCreation (): void {
     setTimeout(() => {
       this.isServerCreationAllowed = true;
-      this.serverCreationStatus = 'No server was created';
+      this.isServerCreated = false;
+      this.serverName = '';
     }, 2000);
   }
 }
