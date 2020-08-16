@@ -1,3 +1,3 @@
-<p [ngStyle]="{ backgroundColor: getColor(), marginLeft: '0.2em' }" class="col-xs-3">
+<p [ngClass]="{ 'alert-success': isOnline(), 'alert-danger': !isOnline() }" [style]="'margin-left: 0.2em'" class="col-xs-3">
   Server with id {{ id }} is currently {{ status }}!
 </p>

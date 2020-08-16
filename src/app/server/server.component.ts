@@ -12,7 +12,7 @@ export class ServerComponent {
      this.status = Math.random() > 0.5 ? 'online' : 'offline';
    }
 
-   getColor (): string {
-     return this.status === 'offline' ? 'red' : 'green';
+   isOnline (): boolean {
+     return this.status === 'online';
    }
 }
