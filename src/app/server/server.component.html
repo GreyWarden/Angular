@@ -1,3 +1,7 @@
-<p [ngClass]="{ 'alert-success': isOnline(), 'alert-danger': !isOnline() }" [style]="'margin-left: 0.2em'" class="col-xs-3">
-  Server with id {{ id }} is currently {{ status }}!
+<p
+  [ngClass]="{ 'alert-success': isOnline(), 'alert-danger': !isOnline() }"
+  class="col-xs-3 server"
+  (click)="toggleStatus()"
+>
+  {{ name }} with id {{ id }} is currently {{ status }}!
 </p>

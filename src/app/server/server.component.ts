@@ -1,18 +1,22 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-server',
-  templateUrl: './server.component.html'
+  templateUrl: './server.component.html',
+  styleUrls: [ './server.component.css' ]
 })
 export class ServerComponent {
-  id = 1;
-  status: string;
+  @Input() id: number;
+  @Input() name: string;
+  @Input() status: string;
+  constructor () {
+  }
 
-   constructor () {
-     this.status = Math.random() > 0.5 ? 'online' : 'offline';
-   }
+  toggleStatus (): void {
+    this.status = this.status === 'online' ? 'offline' : 'online';
+  }
 
-   isOnline (): boolean {
-     return this.status === 'online';
-   }
+  isOnline (): boolean {
+    return this.status === 'online';
+  }
 }
