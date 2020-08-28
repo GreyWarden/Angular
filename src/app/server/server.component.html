@@ -4,12 +4,13 @@
     <p>
       <strong
         *ngIf="element.type === 'server'"
-        style="color: red;"
+        class="server"
       >
         {{ element.content }}
       </strong>
       <em
         *ngIf="element.type === 'blueprint'"
+        class="blueprint"
       >
         {{ element.content }}
       </em>
