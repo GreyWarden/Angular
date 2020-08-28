@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import {ServerElement} from '../shared/server.types';
 
 @Component({
@@ -7,6 +7,7 @@ import {ServerElement} from '../shared/server.types';
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
+  @Output() serverCreated = new EventEmitter<ServerElement>();
   newServerName: string;
   newServerContent: string;
 
@@ -15,13 +16,8 @@ export class CockpitComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAddServer(): void {
-    // this.serverElements.push(this.createServerWithType('server'));
-    this.clearInputs();
-  }
-
-  onAddBlueprint(): void {
-    // this.serverElements.push(this.createServerWithType('blueprint'));
+  onAddServer(type: string): void {
+    this.serverCreated.emit(this.createServerWithType(type));
     this.clearInputs();
   }
 

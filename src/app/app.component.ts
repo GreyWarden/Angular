@@ -19,4 +19,7 @@ export class AppComponent {
         content: 'First server content'
       }
     ];
+  onServerAdded(serverElementData: ServerElement): void {
+    this.serverElements.push({...serverElementData});
+  }
 }
