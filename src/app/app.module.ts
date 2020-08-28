@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerComponent } from './server/server.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { ServerComponent } from './server/server.component';
     CockpitComponent,
     ServerComponent
   ],
-  imports: [
-    BrowserModule,
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
