@@ -1,1 +1,24 @@
-<h3>Hello there!</h3>
+<div class="container center-block text-center">
+  <div class="row">
+    <app-game-control
+      (numberGiven)="onNumberGiven($event)"
+      (resetNumbers)="onNumbersReset()"
+    ></app-game-control>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <app-even
+        *ngFor="let number of evenNumbers"
+        [number]="number"
+        class="row"
+      ></app-even>
+    </div>
+    <div class="col-xs-6">
+      <app-odd
+        *ngFor="let number of oddNumbers"
+        [number]="number"
+        class="row"
+      ></app-odd>
+    </div>
+  </div>
+</div>
