@@ -1,0 +1,16 @@
+<div class="btn-group">
+  <button
+    class="btn btn-primary mr-5"
+    [disabled]="isGameOn"
+    (click)="onStartGame()"
+  >
+    Start
+  </button>
+  <button
+    class="btn btn-danger"
+    [disabled]="!isGameOn"
+    (click)="onFinishGame()"
+  >
+    Stop
+  </button>
+</div>
