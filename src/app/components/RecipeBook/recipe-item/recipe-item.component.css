@@ -1,3 +1,18 @@
 .small-img {
+  width: 100px;
+  max-width: 100px;
   max-height: 50px;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.non-selectable {
+  user-select: none;
+}
+
+.gutter {
+  margin-bottom: 10px;
+}
+
