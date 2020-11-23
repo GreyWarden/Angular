@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  numbers: Array<number> = [1, 2, 3, 4, 5];
+  onlyOdds = false;
 }

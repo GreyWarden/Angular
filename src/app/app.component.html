@@ -1,1 +1,21 @@
-<h3>Hello there!</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <span class="btn btn-primary" (click)="onlyOdds = !onlyOdds">Toggle show only odds</span>
+    </div>
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          [ngClass]="{ 'alert-danger': (onlyOdds && number % 2 !== 0) }"
+          *ngFor="let number of numbers"
+        >
+          <span>
+            {{ number }}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
